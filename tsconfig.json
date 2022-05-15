@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
@@ -16,7 +17,10 @@
     "noImplicitAny": true,
     "types": [
       "node"
-    ]
+    ],
+    "paths": {
+      "@/*": ["src/*"], // 组件中导入 ts 文件
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]
